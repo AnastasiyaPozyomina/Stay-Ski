@@ -6,22 +6,22 @@ body {
 }
 
 .container {
-  max-width: 1260px;
+  width: 1260px;
   margin: 0 auto;
-  max-width: 100%;
+  width: 100%;
 }
 
 /* Типография */
 .offer h2 {
   font-size: 60px;
-  font-family: "Catamaran";
+  font-family: 'Catamaran', sans-serif;
   color: #333333;
   line-height: 1.5;
 }
 
 .offer p {
   font-size: 18px;
-  font-family: "Muli";
+  font-family: 'Muli', sans-serif;
   color: #565656;
   line-height: 1.778;
   text-align: center;
@@ -29,14 +29,14 @@ body {
 
 .crew h2 {
   font-size: 60px;
-  font-family: "Catamaran";
+  font-family: 'Catamaran', sans-serif;
   color: #333333;
   line-height: 1.5;
 }
 
 .about h2 {
   font-size: 60px;
-  font-family: "Catamaran";
+  font-family: 'Catamaran', sans-serif;
   color: #2f2f2f;
   line-height: 1.2;
   text-align: left;
@@ -44,7 +44,7 @@ body {
 
 .about p {
   font-size: 18px;
-  font-family: "Muli";
+  font-family: 'Muli', sans-serif;
   color: #2b2b2b;
   line-height: 1.778;
   text-align: left;
@@ -52,14 +52,14 @@ body {
 
 .testimonials h2 {
   font-size: 60px;
-  font-family: "Catamaran";
+  font-family: 'Catamaran', sans-serif;
   color: #333333;
   line-height: 1.5;
 }
 
 .testimonials p {
   font-size: 18px;
-  font-family: "Muli";
+  font-family: 'Muli', sans-serif;
   color: #565656;
   line-height: 1.778;
   text-align: center;
@@ -67,14 +67,14 @@ body {
 
 .contact h2 {
   font-size: 60px;
-  font-family: "Catamaran";
+  font-family: 'Catamaran', sans-serif;
   color: white;
   line-height: 1.2;
 }
 
 .header p {
   font-size: 24px;
-  font-family: "Muli";
+  font-family: 'Muli', sans-serif;
   color: #fefefe;
   line-height: 1.5;
 }
@@ -88,33 +88,40 @@ body {
   text-align: left;
 }
 
-header {
+.header {
   background-image: url(img/header-bg.png);
-  background-size: cover;
-  height: 100vh;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  max-width: 100%;
+  height: auto;
+  padding: 27px 119.6px 342px 121.5px;
+}
+
+.header .container_nav {
+  max-width: 1680px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  padding: 27px 119.6px 0px 121.5px;
+  margin: 0 auto;
 }
 
-header .logo {
-  width: 156px;
+.header .container_nav .logo {
+  max-width: 156px;
   height: 29.5px;
 }
 
-header .nav__list {
+.header .container_nav nav .nav__list {
   list-style: none;
 }
 
-header .nav__list .nav__item {
+.header .container_nav nav .nav__list .nav__item {
   display: inline-block;
 }
 
-header .nav__list .nav__item .nav__link {
+.header .container_nav nav .nav__list .nav__item .nav__link {
   display: inline-block;
   text-decoration: none;
   font-size: 16px;
@@ -124,8 +131,41 @@ header .nav__list .nav__item .nav__link {
   padding: 10px 10px 10px 10px;
 }
 
-header .nav__list .nav__item .nav__link:hover {
+.header .container_nav nav .nav__list .nav__item .nav__link:hover {
   background-color: #5da1c8;
+}
+
+.header .container {
+  width: 1260px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.header .container h1 {
+  font-size: 24px;
+  font-family: 'Muli', sans-serif;
+  color: #fefefe;
+  line-height: 1.5;
+  width: 50%;
+  font-weight: 400;
+  margin-top: 450px;
+  margin-bottom: 50px;
+}
+
+.header .container .btn-header {
+  font-size: 18px;
+  font-family: 'Catamaran', sans-serif;
+  color: #fefefe;
+  font-weight: bold;
+  text-transform: uppercase;
+  top: 676px;
+  width: 240px;
+  height: 60px;
+  border-radius: 6px;
+  background-color: #ff690f;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0 auto;
 }
 
 main {
@@ -135,7 +175,7 @@ main {
 main .offer {
   background-color: #f7f7f7;
   text-align: center;
-  padding: 95.5px 408px 154px 418px;
+  padding: 95.5px 80px 154px 80px;
 }
 
 main .offer .offer_list {
@@ -145,6 +185,36 @@ main .offer .offer_list {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  margin-top: 57px;
+}
+
+main .offer .offer_list .btn_offer_list {
+  font-size: 15px;
+  font-family: 'Catamaran', sans-serif;
+  color: #fefefe;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-align: center;
+  border-radius: 6px;
+  background-color: #ff690f;
+  width: 120px;
+  height: 50px;
+}
+
+main .offer .offer_list .btn_offer_list .offer_item p {
+  font-size: 14px;
+  font-family: 'Muli', sans-serif;
+  color: #565656;
+  line-height: 6.429;
+}
+
+main .offer .offer_list .btn_offer_list .offer_item h3 {
+  font-size: 24px;
+  font-family: 'Catamaran', sans-serif;
+  color: #333333;
+  line-height: 1.2;
+  text-align: center;
+  font-weight: 900;
 }
 
 main .gallery-wrapper {
@@ -167,7 +237,7 @@ main .gallery-wrapper .gallery-photo1 {
   grid-area: ph-1;
   background-image: url(img/max-kukurudziak-607806-unsplash.png);
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: 100% 100%;
 }
 
 main .gallery-wrapper .gallery-photo2 {
@@ -176,7 +246,7 @@ main .gallery-wrapper .gallery-photo2 {
   grid-area: ph-2;
   background-image: url(img/sports-2982378_1920.png);
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: 100% 100%;
 }
 
 main .gallery-wrapper .gallery-photo3 {
@@ -186,7 +256,7 @@ main .gallery-wrapper .gallery-photo3 {
   grid-area: ph-3;
   background-image: url(img/Brightness_Contrast2.png);
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: 100% 100%;
 }
 
 main .gallery-wrapper .gallery-photo4 {
@@ -196,7 +266,7 @@ main .gallery-wrapper .gallery-photo4 {
   grid-area: ph-4;
   background-image: url(img/fezbot2000-783167-unsplash.png);
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: 100% 100%;
 }
 
 main .gallery-wrapper .gallery-photo5 {
@@ -205,7 +275,7 @@ main .gallery-wrapper .gallery-photo5 {
   grid-area: ph-5;
   background-image: url(img/snowboard-113784_1920.png);
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: 100% 100%;
 }
 
 main .gallery-wrapper .gallery-photo6 {
@@ -214,7 +284,7 @@ main .gallery-wrapper .gallery-photo6 {
   grid-area: ph-6;
   background-image: url(img/naomi-hutchinson-409309-unsplash.png);
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: 100% 100%;
 }
 
 main .gallery-wrapper .gallery-photo7 {
@@ -223,26 +293,31 @@ main .gallery-wrapper .gallery-photo7 {
   grid-area: ph-7;
   background-image: url(img/joshua-reddekopp-217223-unsplash.png);
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: 100% 100%;
 }
 
-main .crew {
+main .crew-wrapper {
   padding: 162px 205px 164px 208px;
   text-align: center;
 }
 
-main .crew .instruction-list {
+main .crew-wrapper .instructors {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
 }
 
-main .about {
+main .crew-wrapper .instructors .instructor-item {
+  margin: 32px;
+}
+
+main .about-wrapper {
   background-image: url(img/IMAGE.png);
-  background-size: cover;
+  background-size: 100% 100%;
   padding: 223px 600px 300px 208px;
 }
 
@@ -251,16 +326,143 @@ main .testimonials {
   text-align: center;
 }
 
-main footer {
+main .footer {
   height: 642px;
+  background-color: #2f2f2f;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
 }
 
-main footer .contact-wrapper {
+main .footer .contact-wrapper {
   padding: 0 168px 96px 117.94px;
   background-color: #2f2f2f;
+  width: 50%;
 }
 
-main footer .contact-wrapper .contact-wrapper img {
+main .footer .contact-wrapper .contact-wrapper img {
   margin-right: 15px;
+}
+
+main .footer .yandex-map {
+  width: 50%;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  -webkit-transition: 0.6s ease;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  -webkit-transition: background-color 0.6s ease;
+  transition: background-color 0.6s ease;
+}
+
+.active,
+.dot:hover {
+  background-color: #ff630b;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {
+    opacity: .4;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fade {
+  from {
+    opacity: .4;
+  }
+  to {
+    opacity: 1;
+  }
 }
 /*# sourceMappingURL=style.css.map */
