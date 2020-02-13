@@ -1,0 +1,262 @@
+@import url('https://fonts.googleapis.com/css?family=Catamaran|Muli');
+
+html,
+body {
+    min-width: 260px;
+}
+
+.container {
+    max-width: 1260px;
+    margin: 0 auto;
+    max-width: 100%;
+}
+
+
+/* Типография */
+.offer h2 {
+    font-size: 60px;
+    font-family: "Catamaran";
+    color: rgb(51, 51, 51);
+    line-height: 1.5;
+
+}
+
+.offer p {
+    font-size: 18px;
+    font-family: "Muli";
+    color: rgb(86, 86, 86);
+    line-height: 1.778;
+    text-align: center;
+}
+
+.crew h2 {
+    font-size: 60px;
+    font-family: "Catamaran";
+    color: rgb(51, 51, 51);
+    line-height: 1.5;
+}
+
+.about h2 {
+    font-size: 60px;
+    font-family: "Catamaran";
+    color: rgb(47, 47, 47);
+    line-height: 1.2;
+    text-align: left;
+}
+
+.about p {
+    font-size: 18px;
+    font-family: "Muli";
+    color: rgb(43, 43, 43);
+    line-height: 1.778;
+    text-align: left;
+}
+
+.testimonials h2 {
+    font-size: 60px;
+    font-family: "Catamaran";
+    color: rgb(51, 51, 51);
+    line-height: 1.5;
+}
+
+.testimonials p {
+    font-size: 18px;
+    font-family: "Muli";
+    color: rgb(86, 86, 86);
+    line-height: 1.778;
+    text-align: center;
+}
+
+.contact h2 {
+    font-size: 60px;
+    font-family: "Catamaran";
+    color: rgb(255, 255, 255);
+    line-height: 1.2;
+}
+
+.header p {
+    font-size: 24px;
+    font-family: "Muli";
+    color: rgb(254, 254, 254);
+    line-height: 1.5;
+
+}
+
+.contact p {
+    font-size: 18px;
+    font-family: "Muli";
+    color: rgb(247, 247, 247);
+    text-transform: uppercase;
+    line-height: 1.444;
+    text-align: left;
+}
+
+header {
+    .logo {
+        width: 156px;
+        height: 29.5px;
+    }
+
+    background-image: url(img/header-bg.png);
+    background-size: cover;
+    height: 100vh;
+    display: flex;
+    justify-content: space-between;
+    padding: 27px 119.6px 0px 121.5px;
+
+    .nav__list {
+        list-style: none;
+
+        .nav__item {
+            display: inline-block;
+
+            .nav__link {
+                display: inline-block;
+                text-decoration: none;
+                font-size: 16px;
+                font-family: "Muli";
+                color: rgb(255, 255, 255);
+                font-weight: bold;
+                padding: 10px 10px 10px 10px;
+
+                &:hover {
+                    background-color: #5da1c8;
+                }
+            }
+
+
+        }
+    }
+
+
+}
+
+
+main {
+    width: 100%;
+
+    .offer {
+        background-color: #f7f7f7;
+        text-align: center;
+        padding: 95.5px 408px 154px 418px;
+
+        .offer_list {
+            display: flex;
+            justify-content: space-between;
+        }
+    }
+
+    .gallery-wrapper {
+        background-size: cover;
+        height: 1256px;
+        width: 100%;
+        display: grid;
+        justify-items: stretch;
+        grid-template-areas:
+            'ph-1 ph-2 ph-3'
+            'ph-4 ph-5 ph-3'
+            'ph-4 ph-6 ph-7';
+        grid-template-rows: repeat (3, 1fr);
+        grid-template-columns: repeat (3, 1fr);
+
+        .gallery-photo1 {
+            grid-area: ph-1;
+            background-image: url(img/max-kukurudziak-607806-unsplash.png);
+            background-repeat: no-repeat;
+            background-size: cover;
+    
+        }
+    
+        .gallery-photo2 {
+            grid-area: ph-2;
+            background-image: url(img/sports-2982378_1920.png);
+            background-repeat: no-repeat;
+            background-size: cover;
+    
+        }
+    
+        .gallery-photo3 {
+            grid-area: ph-3;
+            background-image: url(img/Brightness_Contrast2.png);
+            background-repeat: no-repeat;
+            background-size: cover;
+    
+        }
+    
+        .gallery-photo4 {
+            grid-area: ph-4;
+            background-image: url(img/fezbot2000-783167-unsplash.png);
+            background-repeat: no-repeat;
+            background-size: cover;
+    
+        }
+    
+        .gallery-photo5 {
+            grid-area: ph-5;
+            background-image: url(img/snowboard-113784_1920.png);
+            background-repeat: no-repeat;
+            background-size: cover;
+    
+    
+        }
+    
+        .gallery-photo6 {
+            grid-area: ph-6;
+            background-image: url(img/naomi-hutchinson-409309-unsplash.png);
+            background-repeat: no-repeat;
+            background-size: cover;
+           
+        }
+    
+        .gallery-photo7 {
+            grid-area: ph-7;
+            background-image: url(img/joshua-reddekopp-217223-unsplash.png);
+            background-repeat: no-repeat;
+            background-size: cover;
+
+        }
+      
+    }
+   
+
+    .crew {
+        padding: 162px 205px 164px 208px;
+        text-align: center;
+
+        .instruction-list {
+            display: flex;
+            justify-content: space-between;
+
+
+        }
+
+    }
+
+    .about {
+        background-image: url(img/IMAGE.png);
+        background-size: cover;
+        padding: 223px 600px 300px 208px;
+
+    }
+
+    .testimonials {
+        padding: 162px 540px 165px 549px;
+        text-align: center;
+    }
+
+
+
+    footer {
+        height: 642px;
+
+        .contact-wrapper {
+            padding: 0 168px 96px 117.94px;
+            background-color: #2f2f2f;
+
+            .contact-wrapper img {
+                margin-right: 15px;
+            }
+        }
+
+    }
+}

@@ -1,0 +1,266 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css?family=Catamaran|Muli");
+html,
+body {
+  min-width: 260px;
+}
+
+.container {
+  max-width: 1260px;
+  margin: 0 auto;
+  max-width: 100%;
+}
+
+/* Типография */
+.offer h2 {
+  font-size: 60px;
+  font-family: "Catamaran";
+  color: #333333;
+  line-height: 1.5;
+}
+
+.offer p {
+  font-size: 18px;
+  font-family: "Muli";
+  color: #565656;
+  line-height: 1.778;
+  text-align: center;
+}
+
+.crew h2 {
+  font-size: 60px;
+  font-family: "Catamaran";
+  color: #333333;
+  line-height: 1.5;
+}
+
+.about h2 {
+  font-size: 60px;
+  font-family: "Catamaran";
+  color: #2f2f2f;
+  line-height: 1.2;
+  text-align: left;
+}
+
+.about p {
+  font-size: 18px;
+  font-family: "Muli";
+  color: #2b2b2b;
+  line-height: 1.778;
+  text-align: left;
+}
+
+.testimonials h2 {
+  font-size: 60px;
+  font-family: "Catamaran";
+  color: #333333;
+  line-height: 1.5;
+}
+
+.testimonials p {
+  font-size: 18px;
+  font-family: "Muli";
+  color: #565656;
+  line-height: 1.778;
+  text-align: center;
+}
+
+.contact h2 {
+  font-size: 60px;
+  font-family: "Catamaran";
+  color: white;
+  line-height: 1.2;
+}
+
+.header p {
+  font-size: 24px;
+  font-family: "Muli";
+  color: #fefefe;
+  line-height: 1.5;
+}
+
+.contact p {
+  font-size: 18px;
+  font-family: "Muli";
+  color: #f7f7f7;
+  text-transform: uppercase;
+  line-height: 1.444;
+  text-align: left;
+}
+
+header {
+  background-image: url(img/header-bg.png);
+  background-size: cover;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 27px 119.6px 0px 121.5px;
+}
+
+header .logo {
+  width: 156px;
+  height: 29.5px;
+}
+
+header .nav__list {
+  list-style: none;
+}
+
+header .nav__list .nav__item {
+  display: inline-block;
+}
+
+header .nav__list .nav__item .nav__link {
+  display: inline-block;
+  text-decoration: none;
+  font-size: 16px;
+  font-family: "Muli";
+  color: white;
+  font-weight: bold;
+  padding: 10px 10px 10px 10px;
+}
+
+header .nav__list .nav__item .nav__link:hover {
+  background-color: #5da1c8;
+}
+
+main {
+  width: 100%;
+}
+
+main .offer {
+  background-color: #f7f7f7;
+  text-align: center;
+  padding: 95.5px 408px 154px 418px;
+}
+
+main .offer .offer_list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+main .gallery-wrapper {
+  background-size: cover;
+  height: 1256px;
+  width: 100%;
+  display: -ms-grid;
+  display: grid;
+  justify-items: stretch;
+      grid-template-areas: 'ph-1 ph-2 ph-3' 'ph-4 ph-5 ph-3' 'ph-4 ph-6 ph-7';
+  -ms-grid-rows: repeat 3, 1fr;
+      grid-template-rows: repeat 3, 1fr;
+  -ms-grid-columns: repeat 3, 1fr;
+      grid-template-columns: repeat 3, 1fr;
+}
+
+main .gallery-wrapper .gallery-photo1 {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: ph-1;
+  background-image: url(img/max-kukurudziak-607806-unsplash.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+main .gallery-wrapper .gallery-photo2 {
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+  grid-area: ph-2;
+  background-image: url(img/sports-2982378_1920.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+main .gallery-wrapper .gallery-photo3 {
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 2;
+  -ms-grid-column: 3;
+  grid-area: ph-3;
+  background-image: url(img/Brightness_Contrast2.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+main .gallery-wrapper .gallery-photo4 {
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 2;
+  -ms-grid-column: 1;
+  grid-area: ph-4;
+  background-image: url(img/fezbot2000-783167-unsplash.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+main .gallery-wrapper .gallery-photo5 {
+  -ms-grid-row: 2;
+  -ms-grid-column: 2;
+  grid-area: ph-5;
+  background-image: url(img/snowboard-113784_1920.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+main .gallery-wrapper .gallery-photo6 {
+  -ms-grid-row: 3;
+  -ms-grid-column: 2;
+  grid-area: ph-6;
+  background-image: url(img/naomi-hutchinson-409309-unsplash.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+main .gallery-wrapper .gallery-photo7 {
+  -ms-grid-row: 3;
+  -ms-grid-column: 3;
+  grid-area: ph-7;
+  background-image: url(img/joshua-reddekopp-217223-unsplash.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+main .crew {
+  padding: 162px 205px 164px 208px;
+  text-align: center;
+}
+
+main .crew .instruction-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+main .about {
+  background-image: url(img/IMAGE.png);
+  background-size: cover;
+  padding: 223px 600px 300px 208px;
+}
+
+main .testimonials {
+  padding: 162px 540px 165px 549px;
+  text-align: center;
+}
+
+main footer {
+  height: 642px;
+}
+
+main footer .contact-wrapper {
+  padding: 0 168px 96px 117.94px;
+  background-color: #2f2f2f;
+}
+
+main footer .contact-wrapper .contact-wrapper img {
+  margin-right: 15px;
+}
+/*# sourceMappingURL=style.css.map */
