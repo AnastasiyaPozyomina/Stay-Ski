@@ -5,16 +5,11 @@ body {
     min-width: 260px;
 }
 
-.container {
-    width: 1260px;
-    margin: 0 auto;
-    width: 100%;
-}
 
 
 
 /* Типография */
-.offer h2 {
+.offer-wrapper h2 {
     font-size: 60px;
     font-family: 'Catamaran', sans-serif;
     color: rgb(51, 51, 51);
@@ -22,7 +17,7 @@ body {
 
 }
 
-.offer p {
+.offer-wrapper p {
     font-size: 18px;
     font-family: 'Muli', sans-serif;
     color: rgb(86, 86, 86);
@@ -94,26 +89,31 @@ body {
 
 .header {
     background-image: url(img/header-bg.png);
-    background-size: 100% 100%;
+    background-size: 100%;
     background-repeat: no-repeat;
-    max-width: 100%;
-    height: auto;
-    padding: 27px 119.6px 342px 121.5px;
+
+
+
 
     .container_nav {
+        position: fixed;
+        background-image: url(img/background-blue.png);
+        min-width: 100%;
         max-width: 1680px;
         display: flex;
         justify-content: space-between;
         margin: 0 auto;
-
+        height: 100px;
 
         .logo {
             max-width: 156px;
             height: 29.5px;
+            margin-top: 30px;
         }
 
 
         nav {
+
             .nav__list {
                 list-style: none;
 
@@ -128,6 +128,7 @@ body {
                         color: rgb(255, 255, 255);
                         font-weight: bold;
                         padding: 10px 10px 10px 10px;
+                        margin-top: 12px;
 
                         &:hover {
                             background-color: #5da1c8;
@@ -142,8 +143,46 @@ body {
 
     }
 
+    .overlay {
+        height: 100%;
+        width: 0;
+        position: fixed;
+        z-index: 1;
+        left: 0;
+        top: 0;
+        background-color: rgb(0, 0, 0);
+        background-color: rgba(0, 0, 0, 0.9);
+        overflow-x: hidden;
+        transition: 0.5s;
+
+
+        .closebtn {
+            position: absolute;
+            padding: 20px;
+            font-size: 50px;
+            top: 20px;
+            right: 45px;
+            color: #ffff;
+            font-weight: 900;
+
+        }
+
+        .overlay-content {
+            position: relative;
+            top: 25%;
+            width: 100%;
+            text-align: center;
+            margin-top: 30px;
+            text-decoration: none;
+
+        }
+
+
+
+    }
+
     .container {
-        width: 1260px;
+        max-width: 1260px;
         margin: 0 auto;
         width: 100%;
 
@@ -171,25 +210,30 @@ body {
             background-color: rgb(255, 105, 15);
             box-sizing: border-box;
             margin: 0 auto;
+            margin-bottom: 340px;
         }
     }
+
 
 }
 
 
 
 main {
-    width: 100%;
 
-    .offer {
+
+    .offer-wrapper {
         background-color: #f7f7f7;
         text-align: center;
         padding: 95.5px 80px 154px 80px;
 
+
         .offer_list {
             display: flex;
+            flex-direction: row;
             justify-content: space-between;
             margin-top: 57px;
+
 
             .btn_offer_list {
                 font-size: 15px;
@@ -202,6 +246,8 @@ main {
                 background-color: rgb(255, 105, 15);
                 width: 120px;
                 height: 50px;
+
+
 
                 .offer_item {
                     p {
@@ -221,14 +267,15 @@ main {
                         font-weight: 900;
 
                     }
+
+
                 }
             }
         }
     }
 
     .gallery-wrapper {
-        background-size: cover;
-        height: 1256px;
+
         width: 100%;
         display: grid;
         justify-items: stretch;
@@ -239,60 +286,52 @@ main {
         grid-template-rows: repeat (3, 1fr);
         grid-template-columns: repeat (3, 1fr);
 
+
+        img {
+            object-fit: cover;
+            width: 100%;
+            height: 100%;
+
+        }
+
         .gallery-photo1 {
             grid-area: ph-1;
-            background-image: url(img/max-kukurudziak-607806-unsplash.png);
-            background-repeat: no-repeat;
-            background-size: 100% 100%;
 
         }
 
         .gallery-photo2 {
             grid-area: ph-2;
-            background-image: url(img/sports-2982378_1920.png);
-            background-repeat: no-repeat;
-            background-size: 100% 100%;
+
 
         }
 
         .gallery-photo3 {
             grid-area: ph-3;
-            background-image: url(img/Brightness_Contrast2.png);
-            background-repeat: no-repeat;
-            background-size: 100% 100%;
+
 
         }
 
         .gallery-photo4 {
             grid-area: ph-4;
-            background-image: url(img/fezbot2000-783167-unsplash.png);
-            background-repeat: no-repeat;
-            background-size: 100% 100%;
+
 
         }
 
         .gallery-photo5 {
             grid-area: ph-5;
-            background-image: url(img/snowboard-113784_1920.png);
-            background-repeat: no-repeat;
-            background-size: 100% 100%;
+
 
 
         }
 
         .gallery-photo6 {
             grid-area: ph-6;
-            background-image: url(img/naomi-hutchinson-409309-unsplash.png);
-            background-repeat: no-repeat;
-            background-size: 100% 100%;
+
 
         }
 
         .gallery-photo7 {
             grid-area: ph-7;
-            background-image: url(img/joshua-reddekopp-217223-unsplash.png);
-            background-repeat: no-repeat;
-            background-size: 100% 100%;
 
         }
 
@@ -305,28 +344,28 @@ main {
 
         .instructors {
             display: flex;
-            flex-flow: row nowrap;
+            flex-direction: row;
 
             .instructor-item {
-                margin: 32px;
+              
             }
+            
+
+        }
+
+        .about-wrapper {
+            background-image: url(img/IMAGE.png);
+            background-size: 100% 100%;
+            padding: 223px 600px 300px 208px;
+
+        }
+
+        .testimonials {
+            padding: 162px 540px 165px 549px;
+            text-align: center;
         }
 
     }
-
-    .about-wrapper {
-        background-image: url(img/IMAGE.png);
-        background-size: 100% 100%;
-        padding: 223px 600px 300px 208px;
-
-    }
-
-    .testimonials {
-        padding: 162px 540px 165px 549px;
-        text-align: center;
-    }
-
-
 
     .footer {
         height: 642px;
@@ -334,7 +373,7 @@ main {
         display: flex;
         flex-direction: row;
 
-        .contact-wrapper{
+        .contact-wrapper {
             padding: 0 168px 96px 117.94px;
             background-color: #2f2f2f;
             width: 50%;
@@ -343,120 +382,73 @@ main {
                 margin-right: 15px;
             }
         }
+
         .yandex-map {
             width: 50%;
         }
 
     }
-}
-
-* {
-    box-sizing: border-box
-}
-
-/* Slideshow container */
-.slideshow-container {
-    max-width: 1000px;
-    position: relative;
-    margin: auto;
-}
-
-/* Hide the images by default */
-.mySlides {
-    display: none;
-}
-
-/* Next & previous buttons */
-.prev,
-.next {
-    cursor: pointer;
-    position: absolute;
-    top: 50%;
-    width: auto;
-    margin-top: -22px;
-    padding: 16px;
-    color: white;
-    font-weight: bold;
-    font-size: 18px;
-    transition: 0.6s ease;
-    border-radius: 0 3px 3px 0;
-    user-select: none;
-}
-
-/* Position the "next button" to the right */
-.next {
-    right: 0;
-    border-radius: 3px 0 0 3px;
-}
-
-/* On hover, add a black background color with a little bit see-through */
-.prev:hover,
-.next:hover {
-    background-color: rgba(0, 0, 0, 0.8);
-}
-
-/* Caption text */
-.text {
-    color: #f2f2f2;
-    font-size: 15px;
-    padding: 8px 12px;
-    position: absolute;
-    bottom: 8px;
-    width: 100%;
-    text-align: center;
-}
-
-/* Number text (1/3 etc) */
-.numbertext {
-    color: #f2f2f2;
-    font-size: 12px;
-    padding: 8px 12px;
-    position: absolute;
-    top: 0;
-}
-
-/* The dots/bullets/indicators */
-.dot {
-    cursor: pointer;
-    height: 15px;
-    width: 15px;
-    margin: 0 2px;
-    background-color: #bbb;
-    border-radius: 50%;
-    display: inline-block;
-    transition: background-color 0.6s ease;
-}
 
 
-.active,
-.dot:hover {
-    background-color: #ff630b;
-}
-
-/* Fading animation */
-.fade {
-    -webkit-animation-name: fade;
-    -webkit-animation-duration: 1.5s;
-    animation-name: fade;
-    animation-duration: 1.5s;
-}
-
-@-webkit-keyframes fade {
-    from {
-        opacity: .4
+    * {
+        box-sizing: border-box
     }
 
-    to {
-        opacity: 1
-    }
-}
 
-@keyframes fade {
-    from {
-        opacity: .4
+
+
+    .overlay a {
+        padding: 8px 8px 8px 32px;
+        text-decoration: none;
+        font-size: 25px;
+        color: #818181;
+        display: block;
+        transition: 0.3s;
     }
 
-    to {
-        opacity: 1
+    /* When you mouse over the navigation links, change their color */
+    .overlay a:hover {
+        color: #f1f1f1;
+
     }
-}
+
+    .burger_menu {
+        display: none;
+    }
+
+    i {
+        color: #ffff;
+        margin: 20px;
+    }
+
+    i:hover {
+        color: #ff660d;
+    }
+
+    .overlay-content a:hover,
+    .overlay-content a:focus {
+        text-transform: uppercase;
+
+    }
+
+
+    @media (max-width: 805px) {
+        .burger_menu {
+            display: block;
+        }
+
+        .nav {
+            display: none;
+        }
+
+        main .offer-wrapper .offer_list {
+            flex-direction: column;
+        }
+
+        .offer_item {
+            margin-top: 40px;
+        }
+
+
+
+    }
